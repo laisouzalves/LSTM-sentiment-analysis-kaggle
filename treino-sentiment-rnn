@@ -1,0 +1,411 @@
+***Hyperparameters***
+
+lr = 0.001
+optimizer = torch.optim.Adam(net.parameters(), lr=lr)
+batch_size = 50
+embedding_dim = 100
+
+Treino nº 1:
+
+SentimentRNN(
+  (embedding): Embedding(19318, 100)
+  (lstm): LSTM(100, 256, batch_first=True, dropout=0.3)
+  (dropout): Dropout(p=0.3, inplace=False)
+  (fc): Linear(in_features=256, out_features=5, bias=True)
+  (log_softmax): LogSoftmax()
+)
+
+Epoch: 1/1... Step: 100... Loss: 1.108135... Val Loss: 1.247848
+Epoch: 1/1... Step: 200... Loss: 1.004013... Val Loss: 1.243160
+Epoch: 1/1... Step: 300... Loss: 1.231508... Val Loss: 1.222744
+Epoch: 1/1... Step: 400... Loss: 1.087016... Val Loss: 1.201452
+Epoch: 1/1... Step: 500... Loss: 1.338526... Val Loss: 1.238859
+Epoch: 1/1... Step: 600... Loss: 1.169857... Val Loss: 1.177035
+Epoch: 1/1... Step: 700... Loss: 1.238654... Val Loss: 1.171346
+Epoch: 1/1... Step: 800... Loss: 1.118281... Val Loss: 1.175536
+Epoch: 1/1... Step: 900... Loss: 1.278712... Val Loss: 1.147122
+Epoch: 1/1... Step: 1000... Loss: 1.146300... Val Loss: 1.138887
+Epoch: 1/1... Step: 1100... Loss: 1.020602... Val Loss: 1.124496
+Epoch: 1/1... Step: 1200... Loss: 0.884927... Val Loss: 1.111014
+Epoch: 1/1... Step: 1300... Loss: 1.045762... Val Loss: 1.111379
+Epoch: 1/1... Step: 1400... Loss: 0.982844... Val Loss: 1.103076
+Epoch: 1/1... Step: 1500... Loss: 0.898750... Val Loss: 1.102462
+Epoch: 1/1... Step: 1600... Loss: 1.076468... Val Loss: 1.086629
+Epoch: 1/1... Step: 1700... Loss: 1.019857... Val Loss: 1.086341
+Epoch: 1/1... Step: 1800... Loss: 0.886411... Val Loss: 1.085519
+Epoch: 1/1... Step: 1900... Loss: 0.894363... Val Loss: 1.081520
+Epoch: 1/1... Step: 2000... Loss: 0.620742... Val Loss: 1.072794
+Epoch: 1/1... Step: 2100... Loss: 0.941244... Val Loss: 1.061901
+Epoch: 1/1... Step: 2200... Loss: 0.851681... Val Loss: 1.066487
+Epoch: 1/1... Step: 2300... Loss: 1.102310... Val Loss: 1.071625
+Epoch: 1/1... Step: 2400... Loss: 1.101176... Val Loss: 1.051374
+
+-----------------------------------------------------------------------
+Treino nº 2: Aumentando dropout lstm e número de epochs
+
+SentimentRNN(
+  (embedding): Embedding(19318, 100)
+  (lstm): LSTM(100, 256, batch_first=True, dropout=0.5)
+  (dropout): Dropout(p=0.3, inplace=False)
+  (fc): Linear(in_features=256, out_features=5, bias=True)
+  (log_softmax): LogSoftmax()
+)
+
+Epoch: 1/2... Step: 100... Loss: 1.322232... Val Loss: 1.253546
+Epoch: 1/2... Step: 200... Loss: 1.356969... Val Loss: 1.241351
+Epoch: 1/2... Step: 300... Loss: 1.241363... Val Loss: 1.238995
+Epoch: 1/2... Step: 400... Loss: 1.321553... Val Loss: 1.232501
+Epoch: 1/2... Step: 500... Loss: 1.020497... Val Loss: 1.214014
+Epoch: 1/2... Step: 600... Loss: 1.046541... Val Loss: 1.200915
+Epoch: 1/2... Step: 700... Loss: 0.901177... Val Loss: 1.187323
+Epoch: 1/2... Step: 800... Loss: 1.271281... Val Loss: 1.180387
+Epoch: 1/2... Step: 900... Loss: 0.866173... Val Loss: 1.161924
+Epoch: 1/2... Step: 1000... Loss: 1.204926... Val Loss: 1.159260
+Epoch: 1/2... Step: 1100... Loss: 0.889723... Val Loss: 1.148612
+Epoch: 1/2... Step: 1200... Loss: 1.085429... Val Loss: 1.142501
+Epoch: 1/2... Step: 1300... Loss: 0.906075... Val Loss: 1.127156
+Epoch: 1/2... Step: 1400... Loss: 0.913221... Val Loss: 1.119322
+Epoch: 1/2... Step: 1500... Loss: 0.847663... Val Loss: 1.112477
+Epoch: 1/2... Step: 1600... Loss: 0.935295... Val Loss: 1.113380
+Epoch: 1/2... Step: 1700... Loss: 1.111817... Val Loss: 1.106444
+Epoch: 1/2... Step: 1800... Loss: 0.976028... Val Loss: 1.099488
+Epoch: 1/2... Step: 1900... Loss: 0.918351... Val Loss: 1.093121
+Epoch: 1/2... Step: 2000... Loss: 1.169632... Val Loss: 1.093403
+Epoch: 1/2... Step: 2100... Loss: 0.865277... Val Loss: 1.089482
+Epoch: 1/2... Step: 2200... Loss: 0.720154... Val Loss: 1.081619
+Epoch: 1/2... Step: 2300... Loss: 0.804796... Val Loss: 1.079311
+Epoch: 1/2... Step: 2400... Loss: 0.963976... Val Loss: 1.069397
+Epoch: 2/2... Step: 2500... Loss: 1.033734... Val Loss: 1.068901
+Epoch: 2/2... Step: 2600... Loss: 0.951195... Val Loss: 1.091474
+Epoch: 2/2... Step: 2700... Loss: 0.709029... Val Loss: 1.095917
+Epoch: 2/2... Step: 2800... Loss: 1.042689... Val Loss: 1.081595
+Epoch: 2/2... Step: 2900... Loss: 0.925657... Val Loss: 1.087256
+Epoch: 2/2... Step: 3000... Loss: 0.728918... Val Loss: 1.074018
+Epoch: 2/2... Step: 3100... Loss: 0.808014... Val Loss: 1.083255
+Epoch: 2/2... Step: 3200... Loss: 0.903710... Val Loss: 1.083536
+Epoch: 2/2... Step: 3300... Loss: 0.912845... Val Loss: 1.075537
+Epoch: 2/2... Step: 3400... Loss: 0.786691... Val Loss: 1.074941
+Epoch: 2/2... Step: 3500... Loss: 0.893917... Val Loss: 1.086871
+Epoch: 2/2... Step: 3600... Loss: 0.983264... Val Loss: 1.082079
+Epoch: 2/2... Step: 3700... Loss: 0.923583... Val Loss: 1.073751
+Epoch: 2/2... Step: 3800... Loss: 0.768452... Val Loss: 1.075649
+Epoch: 2/2... Step: 3900... Loss: 0.769653... Val Loss: 1.065344
+Epoch: 2/2... Step: 4000... Loss: 0.829806... Val Loss: 1.066741
+Epoch: 2/2... Step: 4100... Loss: 0.857015... Val Loss: 1.086603
+Epoch: 2/2... Step: 4200... Loss: 0.783316... Val Loss: 1.068749
+Epoch: 2/2... Step: 4300... Loss: 0.709192... Val Loss: 1.061414
+Epoch: 2/2... Step: 4400... Loss: 0.767347... Val Loss: 1.064045
+Epoch: 2/2... Step: 4500... Loss: 1.107619... Val Loss: 1.060075
+Epoch: 2/2... Step: 4600... Loss: 0.806061... Val Loss: 1.058501
+Epoch: 2/2... Step: 4700... Loss: 0.821048... Val Loss: 1.064236
+Epoch: 2/2... Step: 4800... Loss: 0.753573... Val Loss: 1.056627
+Epoch: 2/2... Step: 4900... Loss: 0.807324... Val Loss: 1.056917
+
+-----------------------------------------------------------------------
+Treino nº 3: Aumentando camada interna lstm e número de epochs
+
+SentimentRNN(
+  (embedding): Embedding(19318, 100)
+  (lstm): LSTM(100, 256, num_layers=2, batch_first=True, dropout=0.5)
+  (dropout): Dropout(p=0.3, inplace=False)
+  (fc): Linear(in_features=256, out_features=5, bias=True)
+  (log_softmax): LogSoftmax()
+)
+
+Epoch: 1/3... Step: 100... Loss: 1.230772... Val Loss: 1.243070
+Epoch: 1/3... Step: 200... Loss: 1.092145... Val Loss: 1.231733
+Epoch: 1/3... Step: 300... Loss: 1.209506... Val Loss: 1.223554
+Epoch: 1/3... Step: 400... Loss: 1.106394... Val Loss: 1.207692
+Epoch: 1/3... Step: 500... Loss: 1.143542... Val Loss: 1.202012
+Epoch: 1/3... Step: 600... Loss: 1.051719... Val Loss: 1.188334
+Epoch: 1/3... Step: 700... Loss: 1.368022... Val Loss: 1.168119
+Epoch: 1/3... Step: 800... Loss: 1.234424... Val Loss: 1.160564
+Epoch: 1/3... Step: 900... Loss: 1.067259... Val Loss: 1.148352
+Epoch: 1/3... Step: 1000... Loss: 1.255504... Val Loss: 1.142992
+Epoch: 1/3... Step: 1100... Loss: 1.218651... Val Loss: 1.130053
+Epoch: 1/3... Step: 1200... Loss: 0.880674... Val Loss: 1.117444
+Epoch: 1/3... Step: 1300... Loss: 0.935560... Val Loss: 1.118301
+Epoch: 1/3... Step: 1400... Loss: 0.962178... Val Loss: 1.099269
+Epoch: 1/3... Step: 1500... Loss: 0.914966... Val Loss: 1.096659
+Epoch: 1/3... Step: 1600... Loss: 0.973744... Val Loss: 1.085934
+Epoch: 1/3... Step: 1700... Loss: 0.833087... Val Loss: 1.088459
+Epoch: 1/3... Step: 1800... Loss: 1.054181... Val Loss: 1.089571
+Epoch: 1/3... Step: 1900... Loss: 0.952438... Val Loss: 1.091588
+Epoch: 1/3... Step: 2000... Loss: 0.819727... Val Loss: 1.079033
+Epoch: 1/3... Step: 2100... Loss: 1.000868... Val Loss: 1.070623
+Epoch: 1/3... Step: 2200... Loss: 1.072296... Val Loss: 1.066030
+Epoch: 1/3... Step: 2300... Loss: 0.980635... Val Loss: 1.059673
+Epoch: 1/3... Step: 2400... Loss: 0.885349... Val Loss: 1.064085
+Epoch: 2/3... Step: 2500... Loss: 0.836141... Val Loss: 1.058589
+Epoch: 2/3... Step: 2600... Loss: 0.872298... Val Loss: 1.067604
+Epoch: 2/3... Step: 2700... Loss: 0.830563... Val Loss: 1.074187
+Epoch: 2/3... Step: 2800... Loss: 0.805926... Val Loss: 1.082120
+Epoch: 2/3... Step: 2900... Loss: 0.838362... Val Loss: 1.071316
+Epoch: 2/3... Step: 3000... Loss: 0.986011... Val Loss: 1.071659
+Epoch: 2/3... Step: 3100... Loss: 0.787642... Val Loss: 1.082376
+Epoch: 2/3... Step: 3200... Loss: 0.784742... Val Loss: 1.066361
+Epoch: 2/3... Step: 3300... Loss: 0.606346... Val Loss: 1.062114
+Epoch: 2/3... Step: 3400... Loss: 0.703952... Val Loss: 1.059069
+Epoch: 2/3... Step: 3500... Loss: 0.950132... Val Loss: 1.059672
+Epoch: 2/3... Step: 3600... Loss: 0.641734... Val Loss: 1.079005
+Epoch: 2/3... Step: 3700... Loss: 0.801596... Val Loss: 1.064716
+Epoch: 2/3... Step: 3800... Loss: 0.681946... Val Loss: 1.066242
+Epoch: 2/3... Step: 3900... Loss: 0.960313... Val Loss: 1.050814
+Epoch: 2/3... Step: 4000... Loss: 0.754533... Val Loss: 1.048302
+Epoch: 2/3... Step: 4100... Loss: 0.741244... Val Loss: 1.044679
+Epoch: 2/3... Step: 4200... Loss: 0.781243... Val Loss: 1.054418
+Epoch: 2/3... Step: 4300... Loss: 0.831278... Val Loss: 1.041146
+Epoch: 2/3... Step: 4400... Loss: 0.991720... Val Loss: 1.044746
+Epoch: 2/3... Step: 4500... Loss: 0.832665... Val Loss: 1.041653
+Epoch: 2/3... Step: 4600... Loss: 0.802213... Val Loss: 1.056171
+Epoch: 2/3... Step: 4700... Loss: 0.933985... Val Loss: 1.040816
+Epoch: 2/3... Step: 4800... Loss: 0.911424... Val Loss: 1.042862
+Epoch: 2/3... Step: 4900... Loss: 0.597655... Val Loss: 1.058377
+Epoch: 3/3... Step: 5000... Loss: 0.744162... Val Loss: 1.054224
+Epoch: 3/3... Step: 5100... Loss: 0.747128... Val Loss: 1.081945
+Epoch: 3/3... Step: 5200... Loss: 0.792756... Val Loss: 1.072346
+Epoch: 3/3... Step: 5300... Loss: 0.708462... Val Loss: 1.078726
+Epoch: 3/3... Step: 5400... Loss: 0.761325... Val Loss: 1.069413
+Epoch: 3/3... Step: 5500... Loss: 0.785817... Val Loss: 1.086357
+Epoch: 3/3... Step: 5600... Loss: 0.685886... Val Loss: 1.071016
+Epoch: 3/3... Step: 5700... Loss: 0.853124... Val Loss: 1.091653
+Epoch: 3/3... Step: 5800... Loss: 0.790330... Val Loss: 1.065633
+Epoch: 3/3... Step: 5900... Loss: 0.770720... Val Loss: 1.079826
+Epoch: 3/3... Step: 6000... Loss: 0.727814... Val Loss: 1.077391
+Epoch: 3/3... Step: 6100... Loss: 0.831762... Val Loss: 1.059907
+Epoch: 3/3... Step: 6200... Loss: 0.603156... Val Loss: 1.037619
+Epoch: 3/3... Step: 6300... Loss: 0.787936... Val Loss: 1.054126
+Epoch: 3/3... Step: 6400... Loss: 0.845275... Val Loss: 1.050595
+Epoch: 3/3... Step: 6500... Loss: 0.754938... Val Loss: 1.057555
+Epoch: 3/3... Step: 6600... Loss: 0.790210... Val Loss: 1.082987
+Epoch: 3/3... Step: 6700... Loss: 0.650699... Val Loss: 1.074708
+Epoch: 3/3... Step: 6800... Loss: 0.790644... Val Loss: 1.045986
+Epoch: 3/3... Step: 6900... Loss: 0.762511... Val Loss: 1.049161
+Epoch: 3/3... Step: 7000... Loss: 0.875172... Val Loss: 1.052709
+Epoch: 3/3... Step: 7100... Loss: 0.868654... Val Loss: 1.046242
+Epoch: 3/3... Step: 7200... Loss: 0.613808... Val Loss: 1.048206
+Epoch: 3/3... Step: 7300... Loss: 0.723934... Val Loss: 1.038007
+Epoch: 3/3... Step: 7400... Loss: 0.665638... Val Loss: 1.049543
+
+-----------------------------------------------------------------------
+Treino nº 4: Voltando para uma camada interna lstm, aumentando lr e aumentando batch_size
+
+lr = 0.005
+batch_size = 256
+
+SentimentRNN(
+  (embedding): Embedding(19318, 100)
+  (lstm): LSTM(100, 256, batch_first=True, dropout=0.5)
+  (dropout): Dropout(p=0.3, inplace=False)
+  (fc): Linear(in_features=256, out_features=5, bias=True)
+  (log_softmax): LogSoftmax()
+)
+
+
+Epoch: 1/3... Step: 100... Loss: 1.115410... Val Loss: 1.205508
+Epoch: 1/3... Step: 200... Loss: 1.049040... Val Loss: 1.122601
+Epoch: 1/3... Step: 300... Loss: 0.953279... Val Loss: 1.065179
+Epoch: 1/3... Step: 400... Loss: 0.822934... Val Loss: 1.041163
+Epoch: 2/3... Step: 500... Loss: 0.869316... Val Loss: 1.048396
+Epoch: 2/3... Step: 600... Loss: 0.775486... Val Loss: 1.054426
+Epoch: 2/3... Step: 700... Loss: 0.764419... Val Loss: 1.047831
+Epoch: 2/3... Step: 800... Loss: 0.744062... Val Loss: 1.034614
+Epoch: 2/3... Step: 900... Loss: 0.821241... Val Loss: 1.025462
+Epoch: 3/3... Step: 1000... Loss: 0.694804... Val Loss: 1.066500
+Epoch: 3/3... Step: 1100... Loss: 0.649846... Val Loss: 1.057852
+Epoch: 3/3... Step: 1200... Loss: 0.750411... Val Loss: 1.070812
+Epoch: 3/3... Step: 1300... Loss: 0.669055... Val Loss: 1.065804
+Epoch: 3/3... Step: 1400... Loss: 0.637195... Val Loss: 1.044219
+
+-----------------------------------------------------------------------
+Treino nº 5: Aumentando embedding_dim e aumentando epochs
+
+embedding_dim = 200
+
+SentimentRNN(
+  (embedding): Embedding(19318, 200)
+  (lstm): LSTM(200, 256, batch_first=True, dropout=0.5)
+  (dropout): Dropout(p=0.3, inplace=False)
+  (fc): Linear(in_features=256, out_features=5, bias=True)
+  (log_softmax): LogSoftmax()
+)
+
+Epoch: 1/4... Step: 100... Loss: 1.151198... Val Loss: 1.147603
+Epoch: 1/4... Step: 200... Loss: 0.983475... Val Loss: 1.093595
+Epoch: 1/4... Step: 300... Loss: 0.913465... Val Loss: 1.056695
+Epoch: 1/4... Step: 400... Loss: 0.855053... Val Loss: 1.029568
+Epoch: 2/4... Step: 500... Loss: 0.733183... Val Loss: 1.035628
+Epoch: 2/4... Step: 600... Loss: 0.689226... Val Loss: 1.043943
+Epoch: 2/4... Step: 700... Loss: 0.744675... Val Loss: 1.041130
+Epoch: 2/4... Step: 800... Loss: 0.758580... Val Loss: 1.011513
+Epoch: 2/4... Step: 900... Loss: 0.889226... Val Loss: 1.002524
+Epoch: 3/4... Step: 1000... Loss: 0.584851... Val Loss: 1.039447
+Epoch: 3/4... Step: 1100... Loss: 0.686540... Val Loss: 1.058540
+Epoch: 3/4... Step: 1200... Loss: 0.698561... Val Loss: 1.048186
+Epoch: 3/4... Step: 1300... Loss: 0.618568... Val Loss: 1.037829
+Epoch: 3/4... Step: 1400... Loss: 0.655749... Val Loss: 1.036471
+Epoch: 4/4... Step: 1500... Loss: 0.643936... Val Loss: 1.099762
+Epoch: 4/4... Step: 1600... Loss: 0.613821... Val Loss: 1.107410
+Epoch: 4/4... Step: 1700... Loss: 0.664436... Val Loss: 1.106392
+Epoch: 4/4... Step: 1800... Loss: 0.656981... Val Loss: 1.082261
+Epoch: 4/4... Step: 1900... Loss: 0.609918... Val Loss: 1.066841
+
+-----------------------------------------------------------------------
+Treino nº 6: Diminuindo epochs e batch_size (diminuindo o batchsize e possivel observar com maior precisao a evolucao do val_loss) 
+
+batch_size = 128
+
+SentimentRNN(
+  (embedding): Embedding(19318, 200)
+  (lstm): LSTM(200, 256, batch_first=True, dropout=0.5)
+  (dropout): Dropout(p=0.3, inplace=False)
+  (fc): Linear(in_features=256, out_features=5, bias=True)
+  (log_softmax): LogSoftmax()
+)
+
+Epoch: 1/3... Step: 100... Loss: 1.246202... Val Loss: 1.212870
+Epoch: 1/3... Step: 200... Loss: 1.067275... Val Loss: 1.129491
+Epoch: 1/3... Step: 300... Loss: 1.055753... Val Loss: 1.090340
+Epoch: 1/3... Step: 400... Loss: 0.927526... Val Loss: 1.063482
+Epoch: 1/3... Step: 500... Loss: 0.930709... Val Loss: 1.052635
+Epoch: 1/3... Step: 600... Loss: 0.787597... Val Loss: 1.031178
+Epoch: 1/3... Step: 700... Loss: 0.928011... Val Loss: 1.028114
+Epoch: 1/3... Step: 800... Loss: 0.947326... Val Loss: 1.023482
+Epoch: 1/3... Step: 900... Loss: 0.734237... Val Loss: 1.015955
+Epoch: 2/3... Step: 1000... Loss: 0.700547... Val Loss: 1.045122
+Epoch: 2/3... Step: 1100... Loss: 0.805490... Val Loss: 1.044645
+Epoch: 2/3... Step: 1200... Loss: 0.741779... Val Loss: 1.039668
+Epoch: 2/3... Step: 1300... Loss: 0.787309... Val Loss: 1.023491
+Epoch: 2/3... Step: 1400... Loss: 0.754336... Val Loss: 1.025777
+Epoch: 2/3... Step: 1500... Loss: 0.885276... Val Loss: 1.007608
+Epoch: 2/3... Step: 1600... Loss: 0.720030... Val Loss: 1.002608
+Epoch: 2/3... Step: 1700... Loss: 0.806656... Val Loss: 1.011795
+Epoch: 2/3... Step: 1800... Loss: 0.861159... Val Loss: 1.012182
+Epoch: 2/3... Step: 1900... Loss: 0.663924... Val Loss: 1.018263
+Epoch: 3/3... Step: 2000... Loss: 0.620364... Val Loss: 1.047817
+Epoch: 3/3... Step: 2100... Loss: 0.647832... Val Loss: 1.055627
+Epoch: 3/3... Step: 2200... Loss: 0.670880... Val Loss: 1.052476
+Epoch: 3/3... Step: 2300... Loss: 0.613732... Val Loss: 1.055834
+Epoch: 3/3... Step: 2400... Loss: 0.750647... Val Loss: 1.057973
+Epoch: 3/3... Step: 2500... Loss: 0.644830... Val Loss: 1.050923
+Epoch: 3/3... Step: 2600... Loss: 0.689999... Val Loss: 1.050297
+Epoch: 3/3... Step: 2700... Loss: 0.692657... Val Loss: 1.036938
+Epoch: 3/3... Step: 2800... Loss: 0.644719... Val Loss: 1.032518
+Epoch: 3/3... Step: 2900... Loss: 0.620562... Val Loss: 1.026332
+
+Test Loss: 1.056424
+
+Test Accuracy of     0: 20% (153/741)
+Test Accuracy of     1: 43% (1354/3108)
+Test Accuracy of     2: 80% (6085/7553)
+Test Accuracy of     3: 41% (1329/3192)
+Test Accuracy of     4: 30% (272/894)
+
+Test Accuracy (Overall): 59% (9193/15488)
+
+-----------------------------------------------------------------------
+Treino nº 7: Aumentando novamente o número de camadas internas da lstm
+
+SentimentRNN(
+  (embedding): Embedding(19318, 200)
+  (lstm): LSTM(200, 256, num_layers=2, batch_first=True, dropout=0.5)
+  (dropout): Dropout(p=0.3, inplace=False)
+  (fc): Linear(in_features=256, out_features=5, bias=True)
+  (log_softmax): LogSoftmax()
+)
+
+Epoch: 1/3... Step: 100... Loss: 1.096663... Val Loss: 1.213471
+Epoch: 1/3... Step: 200... Loss: 0.941631... Val Loss: 1.127611
+Epoch: 1/3... Step: 300... Loss: 0.973223... Val Loss: 1.099629
+Epoch: 1/3... Step: 400... Loss: 1.050930... Val Loss: 1.054063
+Epoch: 1/3... Step: 500... Loss: 0.931982... Val Loss: 1.058067
+Epoch: 1/3... Step: 600... Loss: 0.786865... Val Loss: 1.053219
+Epoch: 1/3... Step: 700... Loss: 0.903667... Val Loss: 1.028501
+Epoch: 1/3... Step: 800... Loss: 0.820922... Val Loss: 1.017266
+Epoch: 1/3... Step: 900... Loss: 0.859362... Val Loss: 1.010904
+Epoch: 2/3... Step: 1000... Loss: 0.736691... Val Loss: 1.018420
+Epoch: 2/3... Step: 1100... Loss: 0.963718... Val Loss: 1.057204
+Epoch: 2/3... Step: 1200... Loss: 0.748202... Val Loss: 1.026284
+Epoch: 2/3... Step: 1300... Loss: 0.779068... Val Loss: 1.022304
+Epoch: 2/3... Step: 1400... Loss: 0.814156... Val Loss: 1.024877
+Epoch: 2/3... Step: 1500... Loss: 0.706589... Val Loss: 1.018308
+Epoch: 2/3... Step: 1600... Loss: 0.789927... Val Loss: 1.029856
+Epoch: 2/3... Step: 1700... Loss: 0.843390... Val Loss: 1.019807
+Epoch: 2/3... Step: 1800... Loss: 0.764954... Val Loss: 1.032837
+Epoch: 2/3... Step: 1900... Loss: 0.828222... Val Loss: 1.015325
+Epoch: 3/3... Step: 2000... Loss: 0.588326... Val Loss: 1.060266
+Epoch: 3/3... Step: 2100... Loss: 0.637246... Val Loss: 1.049777
+Epoch: 3/3... Step: 2200... Loss: 0.746093... Val Loss: 1.062614
+Epoch: 3/3... Step: 2300... Loss: 0.830212... Val Loss: 1.060048
+Epoch: 3/3... Step: 2400... Loss: 0.632259... Val Loss: 1.047667
+Epoch: 3/3... Step: 2500... Loss: 0.802211... Val Loss: 1.037619
+Epoch: 3/3... Step: 2600... Loss: 0.664214... Val Loss: 1.034124
+Epoch: 3/3... Step: 2700... Loss: 0.784913... Val Loss: 1.036464
+Epoch: 3/3... Step: 2800... Loss: 0.691630... Val Loss: 1.033610
+Epoch: 3/3... Step: 2900... Loss: 0.743529... Val Loss: 1.025177
+
+Test Loss: 1.060655
+
+Test Accuracy of     0: 20% (153/739)
+Test Accuracy of     1: 44% (1389/3095)
+Test Accuracy of     2: 77% (5847/7559)
+Test Accuracy of     3: 46% (1486/3197)
+Test Accuracy of     4: 35% (323/898)
+
+Test Accuracy (Overall): 59% (9198/15488)
+
+-----------------------------------------------------------------------
+Treino nº 8 (cont. do treino 7): Aumentando epoch e diminuindo o lr
+
+lr = 0.001
+
+Epoch: 1/4... Step: 100... Loss: 0.733285... Val Loss: 1.068734
+Epoch: 1/4... Step: 200... Loss: 0.654291... Val Loss: 1.059251
+Epoch: 1/4... Step: 300... Loss: 0.669949... Val Loss: 1.083451
+Epoch: 1/4... Step: 400... Loss: 0.740750... Val Loss: 1.086438
+Epoch: 1/4... Step: 500... Loss: 0.725762... Val Loss: 1.047285
+Epoch: 1/4... Step: 600... Loss: 0.726553... Val Loss: 1.054882
+Epoch: 1/4... Step: 700... Loss: 0.837476... Val Loss: 1.057664
+Epoch: 1/4... Step: 800... Loss: 0.633633... Val Loss: 1.081536
+Epoch: 1/4... Step: 900... Loss: 0.651102... Val Loss: 1.058119
+Epoch: 2/4... Step: 1000... Loss: 0.560727... Val Loss: 1.102993
+Epoch: 2/4... Step: 1100... Loss: 0.693292... Val Loss: 1.089112
+Epoch: 2/4... Step: 1200... Loss: 0.666575... Val Loss: 1.116117
+Epoch: 2/4... Step: 1300... Loss: 0.745819... Val Loss: 1.103957
+Epoch: 2/4... Step: 1400... Loss: 0.702927... Val Loss: 1.062843
+Epoch: 2/4... Step: 1500... Loss: 0.744925... Val Loss: 1.060209
+Epoch: 2/4... Step: 1600... Loss: 0.769507... Val Loss: 1.059781
+Epoch: 2/4... Step: 1700... Loss: 0.864876... Val Loss: 1.042589
+Epoch: 2/4... Step: 1800... Loss: 0.578933... Val Loss: 1.057393
+Epoch: 2/4... Step: 1900... Loss: 0.629440... Val Loss: 1.069152
+Epoch: 3/4... Step: 2000... Loss: 0.651727... Val Loss: 1.125519
+Epoch: 3/4... Step: 2100... Loss: 0.683694... Val Loss: 1.148836
+Epoch: 3/4... Step: 2200... Loss: 0.756570... Val Loss: 1.120755
+Epoch: 3/4... Step: 2300... Loss: 0.650138... Val Loss: 1.097509
+Epoch: 3/4... Step: 2400... Loss: 0.602211... Val Loss: 1.096565
+Epoch: 3/4... Step: 2500... Loss: 0.703587... Val Loss: 1.101466
+Epoch: 3/4... Step: 2600... Loss: 0.803286... Val Loss: 1.094427
+Epoch: 3/4... Step: 2700... Loss: 0.552675... Val Loss: 1.092307
+Epoch: 3/4... Step: 2800... Loss: 0.609997... Val Loss: 1.083632
+Epoch: 3/4... Step: 2900... Loss: 0.922709... Val Loss: 1.087488
+Epoch: 4/4... Step: 3000... Loss: 0.635334... Val Loss: 1.169150
+Epoch: 4/4... Step: 3100... Loss: 0.483041... Val Loss: 1.122642
+Epoch: 4/4... Step: 3200... Loss: 0.694709... Val Loss: 1.111062
+Epoch: 4/4... Step: 3300... Loss: 0.864367... Val Loss: 1.120324
+Epoch: 4/4... Step: 3400... Loss: 0.520299... Val Loss: 1.108163
+Epoch: 4/4... Step: 3500... Loss: 0.725909... Val Loss: 1.093686
+Epoch: 4/4... Step: 3600... Loss: 0.706578... Val Loss: 1.106413
+Epoch: 4/4... Step: 3700... Loss: 0.653121... Val Loss: 1.102774
+Epoch: 4/4... Step: 3800... Loss: 0.583968... Val Loss: 1.092735
+Epoch: 4/4... Step: 3900... Loss: 0.690540... Val Loss: 1.104048
+
+Test Loss: 1.127546
+
+Test Accuracy of     0: 17% (127/735)
+Test Accuracy of     1: 49% (1518/3094)
+Test Accuracy of     2: 70% (5311/7565)
+Test Accuracy of     3: 56% (1813/3197)
+Test Accuracy of     4: 19% (173/897)
+
+Test Accuracy (Overall): 57% (8942/15488)
+
